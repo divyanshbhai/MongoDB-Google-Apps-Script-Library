@@ -42,22 +42,21 @@ Before you can interact with MongoDB, you'll need the following:
 Here’s a basic example of how to use the library:
 
 ```javascript
-const mongoDB = MongoDBLibrary; // Replace with the identifier of your library
-
+const mongoGs = MongoGS; 
 const apikey = 'YourAPIKey';
 const clusterName = 'Cluster0';
 const databaseName = 'myDatabase';
 const collectionName = 'myCollection';
 
 // Example: Insert data
-const result = mongoDB.insertData(apikey, clusterName, databaseName, collectionName, { name: "John Doe", age: 30 });
+const result = mongoGs.insertData(apikey, clusterName, databaseName, collectionName, { name: "John Doe", age: 30 });
 Logger.log(result);
 
 // Example: Find data
 let sort = {}
 let limit = 10
 let skip = 0
-const documents = mongoDB.findData(apikey, clusterName, databaseName, collectionName, { name: "John Doe" }, sort, limit);
+const documents = mongoGs.findData(apikey, clusterName, databaseName, collectionName, { name: "John Doe" }, sort, limit);
 Logger.log(documents);
 ```
 
@@ -80,7 +79,7 @@ Logger.log(documents);
 **Example**:
 ```javascript
 const document = { name: "Jane Doe", age: 25 };
-const result = mongoDB.insertData(apikey, clusterName, databaseName, collectionName, document);
+const result = mongoGs.insertData(apikey, clusterName, databaseName, collectionName, document);
 Logger.log(result);
 ```
 
@@ -104,7 +103,7 @@ Logger.log(result);
 **Example**:
 ```javascript
 const filter = { age: { $gte: 18 } };
-const documents = mongoDB.findData(apikey, clusterName, databaseName, collectionName, filter);
+const documents = mongoGs.findData(apikey, clusterName, databaseName, collectionName, filter);
 Logger.log(documents);
 ```
 
@@ -127,7 +126,7 @@ Logger.log(documents);
 ```javascript
 const filter = { name: "John Doe" };
 const update = { age: 31 };
-const result = mongoDB.updateData(apikey, clusterName, databaseName, collectionName, filter, update);
+const result = mongoGs.updateData(apikey, clusterName, databaseName, collectionName, filter, update);
 Logger.log(result);
 ```
 
@@ -148,7 +147,7 @@ Logger.log(result);
 **Example**:
 ```javascript
 const filter = { name: "Jane Doe" };
-const result = mongoDB.deleteData(apikey, clusterName, databaseName, collectionName, filter);
+const result = mongoGs.deleteData(apikey, clusterName, databaseName, collectionName, filter);
 Logger.log(result);
 ```
 
