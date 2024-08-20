@@ -23,7 +23,7 @@ To use the MongoDB library in your project:
 3. In the "Add a Library" field, paste the following Script ID:
 
    ```
-   [Your Script ID here]
+   1f2qVDnBAthchfUbPTn2rswlqDJaeOOJz6R3WWfvY6dPwSDN7abSZIfV0
    ```
 
 4. Select the latest version and click `Add`.
@@ -54,7 +54,10 @@ const result = mongoDB.insertData(apikey, clusterName, databaseName, collectionN
 Logger.log(result);
 
 // Example: Find data
-const documents = mongoDB.findData(apikey, clusterName, databaseName, collectionName, { name: "John Doe" });
+let sort = {}
+let limit = 10
+let skip = 0
+const documents = mongoDB.findData(apikey, clusterName, databaseName, collectionName, { name: "John Doe" }, sort, limit);
 Logger.log(documents);
 ```
 
