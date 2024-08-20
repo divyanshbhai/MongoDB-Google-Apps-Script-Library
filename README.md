@@ -1,6 +1,3 @@
-Creating comprehensive documentation for your Google Apps Script library that interacts with MongoDB is essential for helping users understand how to implement and use your functions. Below is an example of how you can structure the documentation:
-
----
 
 # MongoDB Google Apps Script Library
 
@@ -186,4 +183,3 @@ For support or any questions regarding the use of this library, feel free to rea
 - **License**: Include a license for your library if you plan to share it publicly, clarifying how others can use, modify, and distribute it.
 - **Community Contributions**: Encourage users to contribute by reporting issues, suggesting features, or improving documentation.
 
-This documentation should be hosted where users can easily access it, such as a GitHub repository, Google Docs, or a dedicated website.
